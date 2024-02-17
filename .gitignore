@@ -21,4 +21,25 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
-replay_pid*
+
+
+.idea/
+*.iml
+.DS_Store
+target/
+build
+.gradle/
+dump.rdb
+generated-test-sources/
+out/
+classes/
+.m2/
+/.metadata/
+.classpath
+.project
+.factorypath
+.settings/
+
+
+# Explicit files #
+/.apt_generated/
