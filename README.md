@@ -1,4 +1,4 @@
-<h1>Java Practice</h1>
+A<h1>Java Practice</h1>
 
 This is practice repository for core java. It will not include swing and applets and networking feature
 
@@ -14,3 +14,4 @@ java -classpath target/classes <package_name.(s)>.<classname>
 
 <h3>Java Topics</h3>
 _1firstjavaprogram
+_2variables
