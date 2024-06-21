@@ -1,4 +1,4 @@
-package com.practice.java._15javamultithreading;
+package com.practice.java._14javamultithreading;
 
 public class _1JavaThreads {
 
