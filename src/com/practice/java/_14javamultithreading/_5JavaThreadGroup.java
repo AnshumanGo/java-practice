@@ -18,8 +18,18 @@ public class _5JavaThreadGroup implements Runnable {
         Thread threadThree = new Thread(childThreadGroupTwo, javaThreadGroup, " Thread Three ");
 
         // checking the number of active thread
-        System.out.println("Number of active thread: " + threadGroupOne.activeCount());
+        System.out.println("Number of active thread before start : " + threadGroupOne.activeCount());
+        System.out.println("Number of active thread before start : " + childThreadGroupOne.activeCount());
+        System.out.println("Number of active thread before start : " + childThreadGroupTwo.activeCount());
 
+        // checking the number of active thread group
+        System.out.println("Number of active thread group before start : "
+                + threadGroupOne.activeGroupCount());
+        System.out.println("Number of active thread group before start : "
+                + childThreadGroupOne.activeGroupCount());
+        System.out.println("Number of active thread group before start : "
+                + childThreadGroupTwo.activeGroupCount());
+        
         threadOne.start();
         threadTwo.start();
         threadThree.start();
@@ -28,23 +38,32 @@ public class _5JavaThreadGroup implements Runnable {
         threadGroupOne.list();
 
         // Check for access permission of current running thread
-        threadGroupOne.checkAccess();
+        threadGroupOne.checkAccess();//checkAccess() method of ThreadGroup class in Java Deprecated from Java 17
         System.out.println(threadGroupOne.getName() + " has access");
 
         // checking the number of active thread
-        System.out.println("Number of active thread: " + threadGroupOne.activeCount());
+        System.out.println("Number of active thread after start : " + threadGroupOne.activeCount());
+        System.out.println("Number of active thread after start : " + childThreadGroupOne.activeCount());
+        System.out.println("Number of active thread after start : " + childThreadGroupTwo.activeCount());
 
         // checking the number of active thread group
-        System.out.println("Number of active thread group: "
+        System.out.println("Number of active thread group after start : "
                 + threadGroupOne.activeGroupCount());
+        System.out.println("Number of active thread group after start : "
+                + childThreadGroupOne.activeGroupCount());
+        System.out.println("Number of active thread group after start : "
+                + childThreadGroupTwo.activeGroupCount());
 
+        System.out.println("The ParentThreadGroup for " + threadGroupOne.getName() + " is " + threadGroupOne.getParent().getName());
+        System.out.println("The ParentThreadGroup for " + childThreadGroupOne.getName() + " is " + childThreadGroupOne.getParent().getName());  
+        System.out.println("The ParentThreadGroup for " + childThreadGroupTwo.getName() + " is " + childThreadGroupTwo.getParent().getName());  
 
         // destroying child threadGroup
-        if (!childThreadGroupOne.isDestroyed()) {
+        if (!childThreadGroupOne.isDestroyed()) { //isDestroyed() method of ThreadGroup class in Java Deprecated from Java 16
 
             try {
 
-                childThreadGroupOne.destroy();
+                childThreadGroupOne.destroy();//destroy() method of ThreadGroup class in Java Deprecated from Java 16
                 System.out.println(childThreadGroupOne.getName() + " destroyed");
             } catch (IllegalThreadStateException e) {
 
@@ -54,11 +73,11 @@ public class _5JavaThreadGroup implements Runnable {
 
 
         // destroying child threadGroup
-        if (!childThreadGroupTwo.isDestroyed()) {
+        if (!childThreadGroupTwo.isDestroyed()) {  //isDestroyed() method of ThreadGroup class in Java Deprecated from Java 16
 
             try {
 
-                childThreadGroupTwo.destroy();
+                childThreadGroupTwo.destroy();//destroy() method of ThreadGroup class in Java Deprecated from Java 16
                 System.out.println(childThreadGroupTwo.getName() + " destroyed");
             } catch (IllegalThreadStateException e) {
 
@@ -68,11 +87,11 @@ public class _5JavaThreadGroup implements Runnable {
 
 
         // destroying parent threadGroup
-        if (!threadGroupOne.isDestroyed()) {
+        if (!threadGroupOne.isDestroyed()) {//isDestroyed() of ThreadGroup class in Java Deprecated from Java 16
 
             try {
 
-                threadGroupOne.destroy();
+                threadGroupOne.destroy();//destroy() of ThreadGroup class in Java Deprecated from Java 16
                 System.out.println(threadGroupOne.getName() + " destroyed");
             } catch (IllegalThreadStateException e) {
 
