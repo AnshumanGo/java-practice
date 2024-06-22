@@ -39,6 +39,7 @@ classes/
 .project
 .factorypath
 .settings/
+bin/
 
 
 # Explicit files #
