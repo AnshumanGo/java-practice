@@ -70,15 +70,15 @@ public class _3OrderLambdaStream {
    System.out.println("Minimum quantity item details is : Name "+minUnitItem.productName+", its quantity: "+minUnitItem.quantity+", its unit price : "+minUnitItem.quantityUnitPrice+" and item's total price for quantity : "+(minUnitItem.quantity*minUnitItem.quantityUnitPrice));
 
 _3OrderLambdaStream maxUnitPriceItem = order.stream().max((itemOne, itemTwo)->itemOne.quantityUnitPrice > itemTwo.quantityUnitPrice ? 1: -1).get();
-System.out.println("Maximum quantity item details is : Name "+maxUnitPriceItem.productName+", its quantity: "+maxUnitPriceItem.quantity+", its unit price : "+maxUnitPriceItem.quantityUnitPrice+" and item's total price for quantity : "+(maxUnitPriceItem.quantity*maxUnitPriceItem.quantityUnitPrice));
+System.out.println("Maximum unit price item details is : Name "+maxUnitPriceItem.productName+", its quantity: "+maxUnitPriceItem.quantity+", its unit price : "+maxUnitPriceItem.quantityUnitPrice+" and item's total price for quantity : "+(maxUnitPriceItem.quantity*maxUnitPriceItem.quantityUnitPrice));
 
 _3OrderLambdaStream minUnitPriceItem = order.stream().min((itemOne, itemTwo)->itemOne.quantityUnitPrice > itemTwo.quantityUnitPrice ? 1: -1).get();
-System.out.println("Minimum quantity item details is : Name "+minUnitPriceItem.productName+", its quantity: "+minUnitPriceItem.quantity+", its unit price : "+minUnitPriceItem.quantityUnitPrice+" and item's total price for quantity : "+(minUnitPriceItem.quantity*minUnitPriceItem.quantityUnitPrice));
+System.out.println("Minimum unit price item details is : Name "+minUnitPriceItem.productName+", its quantity: "+minUnitPriceItem.quantity+", its unit price : "+minUnitPriceItem.quantityUnitPrice+" and item's total price for quantity : "+(minUnitPriceItem.quantity*minUnitPriceItem.quantityUnitPrice));
 
 _3OrderLambdaStream maxTotalPriceItem = order.stream().max((itemOne, itemTwo)->(itemOne.quantity*itemOne.quantityUnitPrice) > (itemTwo.quantity*itemTwo.quantityUnitPrice) ? 1: -1).get();
-System.out.println("Maximum quantity item details is : Name "+maxTotalPriceItem.productName+", its quantity: "+maxTotalPriceItem.quantity+", its unit price : "+maxTotalPriceItem.quantityUnitPrice+" and item's total price for quantity : "+(maxTotalPriceItem.quantity*maxTotalPriceItem.quantityUnitPrice));
+System.out.println("Maximum total price item details is : Name "+maxTotalPriceItem.productName+", its quantity: "+maxTotalPriceItem.quantity+", its unit price : "+maxTotalPriceItem.quantityUnitPrice+" and item's total price for quantity : "+(maxTotalPriceItem.quantity*maxTotalPriceItem.quantityUnitPrice));
 
 _3OrderLambdaStream minTotalPriceItem = order.stream().min((itemOne, itemTwo)->(itemOne.quantity*itemOne.quantityUnitPrice) > (itemTwo.quantity*itemTwo.quantityUnitPrice) ? 1: -1).get();
-System.out.println("Minimum quantity item details is : Name "+minTotalPriceItem.productName+", its quantity: "+minTotalPriceItem.quantity+", its unit price : "+minTotalPriceItem.quantityUnitPrice+" and item's total price for quantity : "+(minTotalPriceItem.quantity*minTotalPriceItem.quantityUnitPrice));
+System.out.println("Minimum total price item details is : Name "+minTotalPriceItem.productName+", its quantity: "+minTotalPriceItem.quantity+", its unit price : "+minTotalPriceItem.quantityUnitPrice+" and item's total price for quantity : "+(minTotalPriceItem.quantity*minTotalPriceItem.quantityUnitPrice));
 	}
 }
