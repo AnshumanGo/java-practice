@@ -31,7 +31,7 @@ public class _1JavaGenerics {
 }
 
 class GenericClass<T> {
-    T obj;
+    private T obj;
 
     void add(T obj) {
         this.obj = obj;
