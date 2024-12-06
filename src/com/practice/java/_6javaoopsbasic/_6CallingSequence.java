@@ -19,6 +19,7 @@ public class _6CallingSequence {
 
 class ParentCall {
 
+	static int staticPcIntVal = 10;
     int pcCount =1;
     int pcTwoCount;
     static {
@@ -77,6 +78,9 @@ class ParentCall {
 }
 
 class ChildCall extends ParentCall {
+	
+	static int staticCIntVal = 10;
+    int cCount =1;
 
     static {
         System.out.println("SIB2 Child call");

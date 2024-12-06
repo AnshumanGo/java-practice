@@ -14,6 +14,7 @@ public class _5SuperKeyword {
         superChild.test();
 
         superChild.name = "child";
+        superParent.name = null;
 
         superParent.test();
         superChild.test();
@@ -27,7 +28,7 @@ public class _5SuperKeyword {
 
 class SuperParent {
 
-    String name;
+    String name = "SuperParent"; 
 
     //Before constructor statement executes, it executes check for non-static data member and if possible initializes them
     SuperParent() {
@@ -52,10 +53,17 @@ class SuperChild extends SuperParent {
 
     @Override
     void test() {
-        if(Objects.equals(super.name, null)){
+        if(Objects.equals(super.name, null) && ! Objects.equals(name, null)){
             super.name = name;
+            System.out.println(this + "  " + name + " name");
+            System.out.println(this + "  " + "SuperChild test");
+        } else if(!Objects.equals(super.name, null)) {
+        	if (Objects.equals(super.name, name)) {
+                System.out.println(this + "  Super " + super.name + " name");
+        	} else if (!Objects.equals(super.name, name)) {
+                System.out.println(this + "  " + super.name + " name");
+        	}
+            System.out.println(this + "  " + "SuperParent test");
         }
-        System.out.println(this + "  " + name + " name");
-        System.out.println(this + "  " + "SuperChild test");
     }
 }

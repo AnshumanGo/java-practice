@@ -6,7 +6,7 @@ public class _1ForLoopDiamond {
 
         //If the number of iteration is fixed, it is recommended to use for loop.
         int level = 5;
-        //Comment from line 10 to 21 to get upside down pyramid
+        //Comment from line 10 to 21 to get upside pyramid
         for (int i = 1; i <= level; i++) {
             for (int j = level - 1; j >= i; j--) {
                 System.out.print(" ");
@@ -20,7 +20,7 @@ public class _1ForLoopDiamond {
             System.out.println();//new line
         }
 
-        //Comment from line 24 to 35 to get pyramid
+        //Comment from line 24 to 365 to get upside down pyramid
         for (int i = 1; i <= level - 1; i++) {
             for (int j = 1; j <= i; j++) {
                 System.out.print(" ");
