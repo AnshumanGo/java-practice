@@ -20,11 +20,13 @@ public class _4JavaScheduledThreadPool implements Runnable {
             System.out.println("Hello World");
             lock.countDown();
         }, 500, 100, TimeUnit.MILLISECONDS);
+		
+		
+		  lock.await(500, TimeUnit.MILLISECONDS);
+		 		 
+        //future.cancel(true);
 
-        lock.await(1000, TimeUnit.MILLISECONDS);
-        future.cancel(true);
-
-        for (int i = 0; i < 5; i++) {
+        for (int i = 1; i <= 5; i++) {
 
             Runnable worker = new _3JavaThreadPool("" + i);
             executor.execute(worker);
@@ -42,7 +44,6 @@ public class _4JavaScheduledThreadPool implements Runnable {
 
         System.out.println(Thread.currentThread().getName() + " (Start) message = " + message);
         processMessage();
-        System.out.println(Thread.currentThread().getName() + " (End)");
     }
 
     private void processMessage() {

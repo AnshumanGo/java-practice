@@ -18,9 +18,9 @@ public class _5JavaThreadGroup implements Runnable {
         Thread threadThree = new Thread(childThreadGroupTwo, javaThreadGroup, " Thread Three ");
 
         // checking the number of active thread
-        System.out.println("Number of active thread before start : " + threadGroupOne.activeCount());
-        System.out.println("Number of active thread before start : " + childThreadGroupOne.activeCount());
-        System.out.println("Number of active thread before start : " + childThreadGroupTwo.activeCount());
+        System.out.println("Number of active thread in threadGroupOne before start : " + threadGroupOne.activeCount());
+        System.out.println("Number of active thread in childThreadGroupOne before start : " + childThreadGroupOne.activeCount());
+        System.out.println("Number of active thread in childThreadGroupTwo before start : " + childThreadGroupTwo.activeCount());
 
         // checking the number of active thread group
         System.out.println("Number of active thread group before start : "
@@ -42,9 +42,10 @@ public class _5JavaThreadGroup implements Runnable {
         System.out.println(threadGroupOne.getName() + " has access");
 
         // checking the number of active thread
-        System.out.println("Number of active thread after start : " + threadGroupOne.activeCount());
-        System.out.println("Number of active thread after start : " + childThreadGroupOne.activeCount());
-        System.out.println("Number of active thread after start : " + childThreadGroupTwo.activeCount());
+        System.out.println("Number of active thread in threadGroupOne after start : " + threadGroupOne.activeCount());
+        System.out.println("Number of active thread in childThreadGroupOne after start : " + childThreadGroupOne.activeCount());
+        System.out.println("Number of active thread in childThreadGroupTwo after start : " + childThreadGroupTwo.activeCount());
+
 
         // checking the number of active thread group
         System.out.println("Number of active thread group after start : "
@@ -111,7 +112,6 @@ public class _5JavaThreadGroup implements Runnable {
     }
 
     public void run() {
-
         System.out.println(Thread.currentThread().getName());
         try {
             Thread.sleep(10);

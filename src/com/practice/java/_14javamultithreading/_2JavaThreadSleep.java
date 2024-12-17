@@ -19,7 +19,7 @@ public class _2JavaThreadSleep extends Thread {
 
                System.out.println(e);
            }
-            System.out.println(i);
+            System.out.println(Thread.currentThread().getName() + " : "+i);
         }
     }
 }

@@ -23,6 +23,11 @@ public class _1JavaRuntimeClass {
 
         runtime.exec("notepad");
 
-        runtime.exec("c:\\Windows\\System32\\shutdown -r -t 0");
+		/*
+		 * Do not remove comments for below line as this line is to restart Windows
+		 * systems which looks like as compatible with Windows 11 . Not sure about
+		 * backward compatibility with older version of windows os
+		 */
+        //runtime.exec("c:\\Windows\\System32\\shutdown -r -t 0");
     }
 }
