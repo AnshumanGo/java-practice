@@ -1,6 +1,8 @@
 package com.practice.java._21javaio;
 
 import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 
 public class _4JavaSerializationAndDeserialization implements Serializable {
 
@@ -13,6 +15,10 @@ public class _4JavaSerializationAndDeserialization implements Serializable {
     }
 
     public static void main(String[] args) throws IOException, ClassNotFoundException {
+
+		Files.deleteIfExists(Paths.get("fileJavaSerializationAndDeserialization.txt"));
+
+		System.out.println("Deletion existing file with same name successful.");
 
         _4JavaSerializationAndDeserialization javaSerializationAndDeserializationOne =new _4JavaSerializationAndDeserialization(211,"ravi");
 

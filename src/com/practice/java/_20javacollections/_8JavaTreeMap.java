@@ -70,5 +70,10 @@ public class _8JavaTreeMap {
         System.out.println("pollFirstEntry : " + treeMap.pollFirstEntry());
         //It removes and returns a key-value mapping associated with the greatest key in this map, or null if the map is empty.
         System.out.println("pollLastEntry : " + treeMap.pollLastEntry());
+
+        System.out.println("At end of execution of all methods stated previously");
+        for (Map.Entry m : treeMap.entrySet()) {
+            System.out.println(m.getKey() + " " + m.getValue());
+        }
     }
 }

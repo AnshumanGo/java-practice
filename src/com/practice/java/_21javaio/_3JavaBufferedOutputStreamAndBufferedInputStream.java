@@ -4,6 +4,8 @@ import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 
 public class _3JavaBufferedOutputStreamAndBufferedInputStream {
 
@@ -18,6 +20,10 @@ public class _3JavaBufferedOutputStreamAndBufferedInputStream {
     Java BufferedInputStream extends FilterInputStream.
     */
     public static void main(String args[])throws Exception{
+
+		Files.deleteIfExists(Paths.get("JavaBufferedOutputStreamAndBufferedInputStream.txt"));
+
+		System.out.println("Deletion existing file with same name successful.");
         FileOutputStream fileOutputStream=new FileOutputStream("JavaBufferedOutputStreamAndBufferedInputStream.txt");
         BufferedOutputStream bufferedOutputStream=new BufferedOutputStream(fileOutputStream);
         String s="Welcome to Java";
