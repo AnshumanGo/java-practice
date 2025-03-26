@@ -48,11 +48,11 @@ public class _5JavaThreadGroup implements Runnable {
 
 
         // checking the number of active thread group
-        System.out.println("Number of active thread group after start : "
+        System.out.println("Number of active thread group parent thread group after start : "
                 + threadGroupOne.activeGroupCount());
-        System.out.println("Number of active thread group after start : "
+        System.out.println("Number of active child thread group after start : "
                 + childThreadGroupOne.activeGroupCount());
-        System.out.println("Number of active thread group after start : "
+        System.out.println("Number of active child thread group after start : "
                 + childThreadGroupTwo.activeGroupCount());
 
         System.out.println("The ParentThreadGroup for " + threadGroupOne.getName() + " is " + threadGroupOne.getParent().getName());

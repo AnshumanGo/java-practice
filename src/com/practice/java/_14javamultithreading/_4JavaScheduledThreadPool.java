@@ -17,7 +17,7 @@ public class _4JavaScheduledThreadPool implements Runnable {
 
         ScheduledExecutorService executor = Executors.newScheduledThreadPool(5);
         ScheduledFuture<?> future = executor.scheduleAtFixedRate(() -> {
-            System.out.println("Hello World");
+            System.out.println("Sjtp");
             lock.countDown();
         }, 500, 100, TimeUnit.MILLISECONDS);
 		
@@ -28,7 +28,7 @@ public class _4JavaScheduledThreadPool implements Runnable {
 
         for (int i = 1; i <= 5; i++) {
 
-            Runnable worker = new _3JavaThreadPool("" + i);
+            Runnable worker = new _4JavaScheduledThreadPool("" + i);
             executor.execute(worker);
         }
 
