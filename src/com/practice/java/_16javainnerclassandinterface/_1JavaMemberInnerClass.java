@@ -16,7 +16,8 @@ package com.practice.java._16javainnerclassandinterface;
                         .append(Outer.access$000(Outer.this)).toString());
         }
     }  */
-public class _1JavaMemberInnerClass {
+public class
+_1JavaMemberInnerClass {
 
     private int data = 30;
 
