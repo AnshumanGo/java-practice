@@ -1,6 +1,6 @@
 package com.practice.java._3datatypes;
 
-public class _1BooleanDataType {
+public class  _1BooleanDataType {
 
 
     boolean a = true;

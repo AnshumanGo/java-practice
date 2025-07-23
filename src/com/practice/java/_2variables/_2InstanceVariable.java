@@ -2,7 +2,7 @@ package com.practice.java._2variables;
 
 public class _2InstanceVariable {
 
-	int i = 10;
+	int i ;
 	/*
 	 * Instance variable will not be using static keyword. If static is used then it
 	 * becomes static variable with class level scope with set same value for every

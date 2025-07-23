@@ -11,7 +11,7 @@ public class _3StaticVariable {
 	 * at
 	 * com.practice.java._2variables._3StaticVariable.main(_3StaticVariable.java:12)
 	 */
-    static String strVar = "test";
+    static char strVar;
 
     public static void main(String[] args) {
 

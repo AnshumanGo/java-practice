@@ -5,6 +5,7 @@ public class _4ThisKeyword {
     private int id;
 
     _4ThisKeyword() {
+        System.out.println("default constructor called in _4ThisKeyword class");
     }
 
     _4ThisKeyword(_4ThisKeyword thisKeyword) {

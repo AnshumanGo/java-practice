@@ -13,8 +13,8 @@ public class _14JavaThreadYield extends Thread {
 
             System.out.println(Thread.currentThread().getName() + " thread in control");
         }
-       /* t1.interrupt();
-        t2.interrupt();*/
+        t1.interrupt();
+        t2.interrupt();
     }
 
     public void run() {

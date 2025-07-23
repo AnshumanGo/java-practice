@@ -1,5 +1,9 @@
 package com.practice.java._14javamultithreading;
 
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
+
 public class _5JavaThreadGroup implements Runnable {
 
     public static void main(String[] args) throws InterruptedException, SecurityException {
@@ -38,8 +42,8 @@ public class _5JavaThreadGroup implements Runnable {
         threadGroupOne.list();
 
         // Check for access permission of current running thread
-        threadGroupOne.checkAccess();//checkAccess() method of ThreadGroup class in Java Deprecated from Java 17
-        System.out.println(threadGroupOne.getName() + " has access");
+        /*threadGroupOne.checkAccess();//checkAccess() method of ThreadGroup class in Java Deprecated from Java 17
+        System.out.println(threadGroupOne.getName() + " has access");*/
 
         // checking the number of active thread
         System.out.println("Number of active thread in threadGroupOne after start : " + threadGroupOne.activeCount());
@@ -57,9 +61,39 @@ public class _5JavaThreadGroup implements Runnable {
 
         System.out.println("The ParentThreadGroup for " + threadGroupOne.getName() + " is " + threadGroupOne.getParent().getName());
         System.out.println("The ParentThreadGroup for " + childThreadGroupOne.getName() + " is " + childThreadGroupOne.getParent().getName());  
-        System.out.println("The ParentThreadGroup for " + childThreadGroupTwo.getName() + " is " + childThreadGroupTwo.getParent().getName());  
+        System.out.println("The ParentThreadGroup for " + childThreadGroupTwo.getName() + " is " + childThreadGroupTwo.getParent().getName());
 
-        // destroying child threadGroup
+        ExecutorService executor = Executors.newFixedThreadPool(5); // A pool of 5 threads
+
+        for (int i = 0; i < 5; i++) {
+            executor.submit(() -> {
+                while (!Thread.currentThread().isInterrupted()) {
+                    System.out.println("Task is running in thread: " + Thread.currentThread().getName());
+                    try {
+                        Thread.sleep(1000);
+                    } catch (InterruptedException e) {
+                        Thread.currentThread().interrupt(); // Preserve the interrupt
+                        break;
+                    }
+                }
+                System.out.println("Task is finished in thread: " + Thread.currentThread().getName());
+            });
+        }
+
+        System.out.println("Shutting down executor.");
+        executor.shutdown(); // Initiates a graceful shutdown
+        try {
+            // Wait for existing tasks to terminate
+            if (!executor.awaitTermination(60, TimeUnit.SECONDS)) {
+                executor.shutdownNow(); // Forcefully shut down
+                if (!executor.awaitTermination(60, TimeUnit.SECONDS))
+                    System.err.println("Executor did not terminate");
+            }
+        } catch (InterruptedException ie) {
+            executor.shutdownNow();
+            Thread.currentThread().interrupt();
+        }
+/*        // destroying child threadGroup
         if (!childThreadGroupOne.isDestroyed()) { //isDestroyed() method of ThreadGroup class in Java Deprecated from Java 16
 
             try {
@@ -98,7 +132,7 @@ public class _5JavaThreadGroup implements Runnable {
 
                 System.out.println(threadGroupOne.getName() + " destroyed");
             }
-        }
+        }*/
 
         // returns the number of threads put into the array
         Thread[] tarray = new Thread[threadGroupOne.activeCount()];

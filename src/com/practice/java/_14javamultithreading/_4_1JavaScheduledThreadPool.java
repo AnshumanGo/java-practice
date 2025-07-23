@@ -2,11 +2,11 @@ package com.practice.java._14javamultithreading;
 
 import java.util.concurrent.*;
 
-public class _4JavaScheduledThreadPool implements Runnable {
+public class _4_1JavaScheduledThreadPool implements Runnable {
 
     private String message;
 
-    public _4JavaScheduledThreadPool(String s) {
+    public _4_1JavaScheduledThreadPool(String s) {
 
         this.message = s;
     }
@@ -28,7 +28,7 @@ public class _4JavaScheduledThreadPool implements Runnable {
 
         for (int i = 1; i <= 5; i++) {
 
-            Runnable worker = new _4JavaScheduledThreadPool("" + i);
+            Runnable worker = new _4_1JavaScheduledThreadPool("" + i);
             executor.execute(worker);
         }
 
