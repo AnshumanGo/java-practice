@@ -15,12 +15,10 @@ public class _2InstanceVariable {
 		_2InstanceVariable instanceVariableOne = new _2InstanceVariable();
 		_2InstanceVariable instanceVariableTwo = new _2InstanceVariable();
 
-		System.out.println("instance variable int i value for instanceVariableOne object :" + instanceVariableOne.i);
-		System.out.println(
-				"instance variable int strValue value for instanceVariableOne object :" + instanceVariableOne.strValue);
-		System.out.println("instance variable int i value for instanceVariableTwo object :" + instanceVariableTwo.i);
-		System.out.println(
-				"instance variable int strValue value for instanceVariableTwo object :" + instanceVariableTwo.strValue);
+		System.out.println("default value for instance variable int i for instanceVariableOne object :" + instanceVariableOne.i);
+		System.out.println("default value for instance variable String strValue for instanceVariableOne object :" + instanceVariableOne.strValue);
+		System.out.println("default value for instance variable int i for instanceVariableTwo object :" + instanceVariableTwo.i);
+		System.out.println("Default value for instance variable String strValue for instanceVariableTwo object :" + instanceVariableTwo.strValue);
 
 		/*
 		 * Update i and strValue for instanceVariableOne and check current value of i
@@ -30,11 +28,9 @@ public class _2InstanceVariable {
 		instanceVariableOne.strValue = "testOne";
 
 		System.out.println("instance variable int i value for instanceVariableOne object :" + instanceVariableOne.i);
-		System.out.println(
-				"instance variable int strValue value for instanceVariableOne object :" + instanceVariableOne.strValue);
+		System.out.println("instance variable int strValue value for instanceVariableOne object :" + instanceVariableOne.strValue);
 		System.out.println("instance variable int i value for instanceVariableTwo object :" + instanceVariableTwo.i);
-		System.out.println(
-				"instance variable int strValue value for instanceVariableTwo object :" + instanceVariableTwo.strValue);
+		System.out.println("instance variable int strValue value for instanceVariableTwo object :" + instanceVariableTwo.strValue);
 
 		/*
 		 * Update i and strValue for instanceVariableTwo and check current value of i
@@ -43,10 +39,8 @@ public class _2InstanceVariable {
 		instanceVariableTwo.i = 30;
 		instanceVariableTwo.strValue = "testTwo";
 		System.out.println("instance variable int i value for instanceVariableOne object :" + instanceVariableOne.i);
-		System.out.println(
-				"instance variable int strValue value for instanceVariableOne object :" + instanceVariableOne.strValue);
+		System.out.println("instance variable int strValue value for instanceVariableOne object :" + instanceVariableOne.strValue);
 		System.out.println("instance variable int i value for instanceVariableTwo object :" + instanceVariableTwo.i);
-		System.out.println(
-				"instance variable int strValue value for instanceVariableTwo object :" + instanceVariableTwo.strValue);
+		System.out.println("instance variable int strValue value for instanceVariableTwo object :" + instanceVariableTwo.strValue);
 	}
 }

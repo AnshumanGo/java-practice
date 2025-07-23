@@ -51,7 +51,7 @@ class SuperChild extends SuperParent {
         System.out.println("SuperChild Constructor");
     }
 
-    @Override
+    /*@Override
     void test() {
         if(Objects.equals(super.name, null) && ! Objects.equals(name, null)){
             super.name = name;
@@ -65,5 +65,5 @@ class SuperChild extends SuperParent {
         	}
             System.out.println(this + "  " + "SuperParent test");
         }
-    }
+    }*/
 }
