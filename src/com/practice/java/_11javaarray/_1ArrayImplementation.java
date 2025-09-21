@@ -1,5 +1,7 @@
 package com.practice.java._11javaarray;
 
+import java.util.Arrays;
+
 public class _1ArrayImplementation {
 
     public static void main(String[] args) {
@@ -24,5 +26,7 @@ public class _1ArrayImplementation {
         String s = new String(charArray);
 
         System.out.println(s);
+        Arrays.sort(charArray);
+        System.out.println(Arrays.toString(charArray));
     }
 }
