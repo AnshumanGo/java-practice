@@ -11,7 +11,14 @@ public class _3JavaExplicitlyThrowException {
     }
 
     public static void main(String args[]) {
-        validate("asdfsd&");
-        System.out.println("rest of the code...");
+        try {
+            validate("asdfsd&");
+        }
+        catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+        finally {
+            System.out.println("rest of the code...");
+        }
     }
 }
