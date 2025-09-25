@@ -51,19 +51,19 @@ class SuperChild extends SuperParent {
         System.out.println("SuperChild Constructor");
     }
 
-    /*@Override
+    @Override
     void test() {
-        if(Objects.equals(super.name, null) && ! Objects.equals(name, null)){
+        if (super.name == null && name != null) {
             super.name = name;
             System.out.println(this + "  " + name + " name");
-            System.out.println(this + "  " + "SuperChild test");
-        } else if(!Objects.equals(super.name, null)) {
-        	if (Objects.equals(super.name, name)) {
+            System.out.println(this + "  SuperChild test");
+        } else {
+            if (Objects.equals(super.name, name)) {
                 System.out.println(this + "  Super " + super.name + " name");
-        	} else if (!Objects.equals(super.name, name)) {
+            } else {
                 System.out.println(this + "  " + super.name + " name");
-        	}
-            System.out.println(this + "  " + "SuperParent test");
+            }
+            System.out.println(this + "  SuperParent test");
         }
-    }*/
+    }
 }
