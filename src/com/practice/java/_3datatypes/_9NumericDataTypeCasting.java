@@ -4,7 +4,7 @@ public class _9NumericDataTypeCasting {
 
     public static void main(String[] args) {
 
-        Double doubleVal = Double.parseDouble("8");
+        Double doubleVal = Double.valueOf("8");
         byte byteValue = doubleVal.byteValue();
         int intValue = doubleVal.intValue();
         long longValue = doubleVal.longValue();
