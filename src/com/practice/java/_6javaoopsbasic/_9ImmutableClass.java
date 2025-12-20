@@ -43,8 +43,13 @@ public final class _9ImmutableClass implements Cloneable {
         return regNo;
     }
 
-    public Object clone() throws CloneNotSupportedException {
-    	return super.clone();
+    @Override
+    public _9ImmutableClass clone() {
+        try {
+            return (_9ImmutableClass) super.clone();
+        } catch (CloneNotSupportedException e) {
+            throw new AssertionError(); // Should never happen since we implement Cloneable
+        }
     }
 }
 

@@ -1,7 +1,5 @@
 package com.practice.java._6javaoopsbasic;
 
-import java.util.Objects;
-
 public class _5SuperKeyword {
 
     public static void main(String[] args) {
@@ -58,7 +56,7 @@ class SuperChild extends SuperParent {
             System.out.println(this + "  " + name + " name");
             System.out.println(this + "  SuperChild test");
         } else {
-            if (Objects.equals(super.name, name)) {
+            if (super.name != null && super.name.equals(name)) {
                 System.out.println(this + "  Super " + super.name + " name");
             } else {
                 System.out.println(this + "  " + super.name + " name");

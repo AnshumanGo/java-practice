@@ -7,10 +7,10 @@ convention. It is used for sequencing of topics for java practice.
 Please follow correct coding convention in real time.
 
 <h3>Command line java compile</h3>
-javac -d target/classes src/main/java/<package_name/(s)>/<classname>.java
+javac -d out <complete_path_from_base_folder_including_src_inside_project_directory>/<classname>.java
 
 <h3>Command line java program run</h3>
-java -classpath target/classes <package_name.(s)>.<classname>
+java -cp out <package_name.(s)_excluding_src_in_package_name>.<classname>
 
 <h3>Java Topics</h3>
 _1firstjavaprogram
